@@ -1,1 +1,35 @@
 /* Empty. Add your own CSS if you like */
+.content-app{
+	background: #C0C0C0;
+}
+.button-ticket{
+  	position: relative;
+  	left: 10%;
+  	top: 30px;
+}
+.button-qr {
+    height: 200px;
+    width: 200px;
+    background: #494949;
+    background: -moz-linear-gradient(top, #494949 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #494949), color-stop(100%, #000000));
+    background: -webkit-linear-gradient(top, #494949 0%, #000000 100%);
+    background: -o-linear-gradient(top, #494949 0%, #000000 100%);
+    background: -ms-linear-gradient(top, #494949 0%, #000000 100%);
+    background: linear-gradient(to bottom, #494949 0%, #000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#494949', endColorstr='#000000', GradientType=0);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 1px #000000;
+    -moz-box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
+    box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
+    text-align:center;
+    text-shadow: 4px 3px 0px #000000, 9px 8px 0px rgba(0, 0, 0, 0.15);
+    top: 10px;
+    left: 40px;
+    position: absolute;
+}
+.button-qr > img {
+    margin-top: 10px;
+}
