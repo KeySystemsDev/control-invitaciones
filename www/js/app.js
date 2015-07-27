@@ -7,7 +7,7 @@
 angular.module('starter', [ 'ionic', 
                             'starter.controllers',
                             'starter.services',
-                            'ng-cordova',
+                            'ngCordova',
                             'ngResource'
                           ])
 
@@ -64,12 +64,12 @@ angular.module('starter', [ 'ionic',
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+  .state('app.ceduladetalle', {
+    url: '/ceduladetalle',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/ceduladetalle.html',
+        controller: 'CedulaDetalleCtrl'
       }
     }
   });

@@ -1,0 +1,31 @@
+<ion-view view-title="Resultado Manual">
+  <ion-content>
+
+    <div class="card">
+        
+        <div class="item item-divider ion-pricetag">
+            Datos del Invitado
+        </div>
+        
+        <div class="item item-text-wrap ion-wineglass">
+            Nombres : {{cedula[0].nombre_usuario}}
+        </div>
+
+        <div class="item item-text-wrap ion-coffee">
+            Apellidos: {{cedula[0].apellido_usuario}}
+        </div>
+
+        <div class="item item-text-wrap ion-pound">
+            Cedula: {{cedula[0].ci_usuario}}
+        </div>
+  
+    </div>
+
+    <div class="button-enviar">
+        <button class="button button-assertive" ng-click="aprobar({{cedula[0].ci_usuario}})">
+            Aprobar
+        </button>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -4,14 +4,16 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CedulaCtrl', function($scope, $cordovaBarcodeScanner, $ionicPopup, Cedula) {
-  console.log("CedulaCtrl");
+.controller('CedulaCtrl', function($scope, $state, $rootScope, $cordovaBarcodeScanner, $ionicPopup, Cedula) {
+    console.log("CedulaCtrl");
 
-  $scope.scanBarcode = function() {
-        $cordovaBarcodeScanner.scan().then(function(cedula) {
-            Cedula.get({i_cedula: cedula.text}).$promise.then(function(data) {
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(result) {
+            Cedula.get({i_cedula: result.text}).$promise.then(function(data) {
+                
                 $state.go('app.ceduladetalle');
-                $rootScope.cedula = Cedula.get({codigo: cedula.text});
+                $rootScope.cedula = Cedula.get({i_cedula: result.text});
+
                 }, function(error) {
                     // error hand
                     console.log(error);
@@ -26,5 +28,28 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistCtrl', function($scope) {
+.controller('CedulaDetalleCtrl', function($scope, $ionicPopup, $ionicHistory, $state, Aprobar) {
+    console.log("CedulaDetalleCtrl");
+
+    $scope.aprobar = function(cedula){
+        Aprobar.query({dato: cedula}).$promise.then(function(data) {
+            
+            $ionicPopup.alert({ title:    'Mensaje de Exito',
+                                template: 'Invitado asociado correctamente cedula : ' + cedula});
+            
+            $ionicHistory.nextViewOptions({
+                disableBack: true
+            });
+            
+            $state.go('app.cedula');
+            
+        }, function(error) {
+            // error hand
+            console.log(error);
+            $ionicPopup.alert({ title:    'Mensaje de Error',
+                                template: 'Ocurrio un error al Aprobar el Invitado'});
+        });        
+    
+    }
+
 });
