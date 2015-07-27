@@ -34,14 +34,14 @@ angular.module('starter', [ 'ionic',
       url: '/app',
       abstract: true,
       templateUrl: 'templates/menu.html',
-      controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.cedulamanual', {
+    url: '/cedulamanual',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/cedulamanual.html',
+        controller: 'CedulaManualCtrl'
       }
     }
   })

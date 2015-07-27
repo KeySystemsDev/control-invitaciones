@@ -36,3 +36,16 @@
 .button-enviar{
     text-align: center;
 }
+.bar-side-menu{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    background: #f8f8f8;
+    border-bottom: solid #000000;
+}
+.icon-side-menu{
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+}

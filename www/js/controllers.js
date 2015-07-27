@@ -1,7 +1,24 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope) {
+.controller('CedulaManualCtrl', function($scope, $state, $rootScope, $ionicPopup, Cedula) {
+    console.log("CedulaManualCtrl");
+    $scope.formData = {};
 
+    $scope.siguiente = function(formData){
+        Cedula.get({i_cedula: formData.i_cedula}).$promise.then(function(data) {
+
+                $state.go('app.ceduladetallemanual');
+
+                $scope.formData = {};
+
+                $rootScope.cedulamanual = Cedula.get({i_cedula: formData.i_cedula});
+                console.log($rootScope.cedulamanual);
+                
+            }, function(error) {
+                $ionicPopup.alert({ title:    'Mensaje de Error',
+                                    template: 'Existe un Error en el Ticket porfavor verifique el Número.'});
+            });
+    }
 })
 
 .controller('CedulaCtrl', function($scope, $state, $rootScope, $cordovaBarcodeScanner, $ionicPopup, Cedula) {
