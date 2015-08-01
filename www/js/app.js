@@ -46,6 +46,16 @@ angular.module('starter', [ 'ionic',
     }
   })
 
+  .state('app.cedulamanualdetalle', {
+    url: '/cedulamanualdetalle',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/cedulamanualdetalle.html',
+        controller: 'CedulaManualDetalleCtrl'
+      }
+    }
+  })
+
   .state('app.browse', {
       url: '/browse',
       views: {

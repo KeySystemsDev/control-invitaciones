@@ -8,21 +8,21 @@
         </div>
         
         <div class="item item-text-wrap ion-wineglass">
-            Nombres : {{cedula[0].nombre_usuario}}
+            Nombres : {{cedulamanual[0].nombre_usuario}}
         </div>
 
         <div class="item item-text-wrap ion-coffee">
-            Apellidos: {{cedula[0].apellido_usuario}}
+            Apellidos: {{cedulamanual[0].apellido_usuario}}
         </div>
 
         <div class="item item-text-wrap ion-pound">
-            Cedula: {{cedula[0].ci_usuario}}
+            Cedula: {{cedulamanual[0].ci_usuario}}
         </div>
   
     </div>
 
     <div class="button-enviar">
-        <button class="button button-assertive" ng-click="aprobar({{cedula[0].ci_usuario}})">
+        <button class="button button-assertive" ng-click="aprobar({{cedulamanual[0].ci_usuario}})">
             Asociar
         </button>
     </div>
