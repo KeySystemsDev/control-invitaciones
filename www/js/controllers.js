@@ -30,7 +30,7 @@ angular.module('starter.controllers', [])
     console.log("CedulaManualDetalleCtrl");
 
     $scope.aprobar = function(cedula){
-        Aprobar.query({dato: cedula}).$promise.then(function(data) {
+        Aprobar.query({i_cedula: cedula}).$promise.then(function(data) {
             
             $ionicPopup.alert({ title:    'Mensaje de Exito',
                                 template: 'Invitado asociado correctamente cedula : ' + cedula});
@@ -84,7 +84,7 @@ angular.module('starter.controllers', [])
     console.log("CedulaDetalleCtrl");
 
     $scope.aprobar = function(cedula){
-        Aprobar.query({dato: cedula}).$promise.then(function(data) {
+        Aprobar.query({i_cedula: cedula}).$promise.then(function(data) {
             
             $ionicPopup.alert({ title:    'Mensaje de Exito',
                                 template: 'Invitado asociado correctamente cedula : ' + cedula});
