@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 .content-app{
-	background: #C0C0C0;
+	background: #fff;
 }
 .button-ticket{
   	position: relative;
@@ -20,7 +20,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#494949', endColorstr='#000000', GradientType=0);
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    border: solid 1px #000000;
+    border: solid 4px #00aeef;
     -moz-box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
     -webkit-box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
     box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
