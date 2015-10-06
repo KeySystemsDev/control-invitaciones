@@ -8,7 +8,8 @@ angular.module('starter', [ 'ionic',
                             'starter.controllers',
                             'starter.services',
                             'ngCordova',
-                            'ngResource'
+                            'ngResource',
+                            'chieffancypants.loadingBar'
                           ])
 
 .run(function($ionicPlatform) {
@@ -27,7 +28,10 @@ angular.module('starter', [ 'ionic',
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
+  
+  cfpLoadingBarProvider.includeSpinner = true;
+
   $stateProvider
 
     .state('app', {

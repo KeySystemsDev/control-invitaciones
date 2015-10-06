@@ -45,3 +45,30 @@
     height: 110px;
     padding: 10px;
 }
+#loading-bar .bar {
+  background: #00aeef;
+  margin-top: 44px;
+  height: 2px;
+  padding: 0px;
+}
+#loading-bar-spinner .spinner-icon {
+  border-top-color:  #00aeef;
+  border-left-color: #00aeef;
+  width: 45px;
+  height: 45px;
+}
+#loading-bar-spinner {
+    display: block;
+    position: absolute;
+    z-index: 10002;
+    left: 50%;
+    top:50%;
+    margin-left: -22.5px;
+    margin-top: -22.5px;
+}
+#loading-bar .peg {
+  -moz-box-shadow: #5f1d12 1px 0 6px 1px;
+  -ms-box-shadow: #5f1d12 1px 0 6px 1px;
+  -webkit-box-shadow: #5f1d12 1px 0 6px 1px;
+  box-shadow: #5f1d12 1px 0 6px 1px;
+}
