@@ -2,11 +2,7 @@
 .content-app{
 	background: #fff;
 }
-.button-ticket{
-  	position: relative;
-  	left: 10%;
-  	top: 30px;
-}
+	
 .button-qr {
     height: 200px;
     width: 200px;
@@ -26,8 +22,8 @@
     box-shadow:inset 0px 2px 20px -5px rgba(0, 0, 0, 0.47), 1px 15px 30px -5px rgba(0, 0, 0, 0.68);
     text-align:center;
     text-shadow: 4px 3px 0px #000000, 9px 8px 0px rgba(0, 0, 0, 0.15);
-    top: 10px;
-    left: 40px;
+    top: 110px;
+    left: 23%;
     position: absolute;
 }
 .button-qr > img {

@@ -20,8 +20,14 @@ angular.module('starter.controllers', [])
                    
                 
             }, function(error) {
-                $ionicPopup.alert({ title:    'Mensaje de Error',
-                                    template: 'Existe un Error en el Ticket porfavor verifique el Número.'});
+                if ( error.status === 0 || error.status === 404 ) {
+                    $ionicPopup.alert({ title:    'Error de Conexión',
+                                        template: 'No es posible establecer conexión a Internet.'});
+                }
+                else {
+                    $ionicPopup.alert({ title:    'Mensaje de Error',
+                                        template: 'Cédula no encontrada.'});
+                }
             });
     }
 })
@@ -64,13 +70,17 @@ angular.module('starter.controllers', [])
                 }
                 else{
                     $ionicPopup.alert({ title:    'Mensaje de Error',
-                                    template: 'Cedula Asociada'});
+                                        template: 'Cedula Asociada'});
                 }
                 }, function(error) {
-                    // error hand
-                    console.log(error);
-                    $ionicPopup.alert({ title:    'Mensaje de Error',
-                                        template: 'Existe un Error en la Cedula porfavor verifique el Número.'});
+                    if ( error.status === 0 || error.status === 404 ) {
+                        $ionicPopup.alert({ title:    'Error de Conexión',
+                                        template: 'No es posible establecer conexión a Internet.'});
+                    }
+                    else {
+                        $ionicPopup.alert({ title:    'Mensaje de Error',
+                                        template: 'Cédula no encontrada.'});
+                    }
                 });
 
         }, function(error) {
@@ -99,7 +109,7 @@ angular.module('starter.controllers', [])
             // error hand
             console.log(error);
             $ionicPopup.alert({ title:    'Mensaje de Error',
-                                template: 'Ocurrio un error al Aprobar el Invitado'});
+                                template: 'Ocurrio un error al Aprobar el Invitado.'});
         });        
     
     }
